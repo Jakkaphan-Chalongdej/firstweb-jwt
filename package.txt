@@ -1,0 +1,16 @@
+    body-parser
+    bootstrap
+    cors
+    express
+    mysql2
+    newsapi
+    next
+    react
+    react-bootstrap
+    react-dom
+    react-router-dom
+    reactstrap
+    sequelize
+    serverless-mysql
+
+    ajax
