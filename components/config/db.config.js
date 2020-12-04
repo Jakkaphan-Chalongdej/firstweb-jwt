@@ -1,25 +1,13 @@
-const env = require("./env.js");
-
-const Sequelize = require("sequelize");
-const sequelize = new Sequelize(env.database, env.username, env.password, {
-  host: env.host,
-  dialect: env.dialect,
-  operatorsAliases: false,
-
+module.exports = {
+  DB: "site-next-js",
+  USER: "root",
+  PASSWORD: "12345678",
+  HOST: "localhost",
+  dialect: "mysql",
   pool: {
-    max: env.max,
-    min: env.pool.min,
-    acquire: env.pool.acquire,
-    idle: env.pool.idle,
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000,
   },
-});
-
-const db = {};
-
-db.Sequelize = Sequelize;
-db.sequelize = sequelize;
-
-//Models/tables
-db.customers = require("../model/customer.model.js")(sequelize, Sequelize);
-
-module.exports = db;
+};

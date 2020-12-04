@@ -2,8 +2,8 @@ import { useState } from "react";
 import Router from "next/router";
 export default function Form() {
   const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [age, setAge] = useState("");
+  //const [lastname, setLastname] = useState("");
+  //const [age, setAge] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
   async function submitHandler(e) {
@@ -17,8 +17,8 @@ export default function Form() {
         },
         body: JSON.stringify({
           firstname,
-          lastname,
-          age,
+         // lastname,
+          //age,
         }),
       });
       setSubmitting(false);
@@ -45,33 +45,7 @@ export default function Form() {
           onChange={(e) => setFirstname(e.target.value)}
         />
       </div>
-      <div className="my-4">
-        <label htmlFor="lastname">
-          <h3 className="font-bold">Lastname</h3>
-        </label>
-        <input
-          className="shadow border rounded w-full"
-          id="lastname"
-          type="text"
-          name="lastname"
-          value={lastname}
-          onChange={(e) => setLastname(e.target.value)}
-        />
-      </div>
-      <div className="my-4">
-        <label htmlFor="age">
-          <h3 className="font-bold">Age</h3>
-        </label>
-        <input
-          className="shadow border rounded w-full"
-          id="age"
-          type="int"
-          name="age"
-          maxLength="2"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-        />
-      </div>
+      
       <button disabled={submitting} type="submit">
         {submitting ? "Creating ..." : "Create"}
       </button>

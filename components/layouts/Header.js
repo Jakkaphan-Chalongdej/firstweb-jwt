@@ -6,11 +6,8 @@ import Head from "next/head";
 
 const handleClickIndex = () => Router.push({ pathname: "/" });
 const routes = [
-  // { href: "/", label: "Home" },
-  { href: "/", label: "Technology" },
-  { href: "/#about", label: "Design" },
-  { href: "/#solution", label: "Solution" },
-  { href: "/#team", label: "Team" },
+
+  { href: "/#about", label: "about" },
   { href: "/#contact", label: "Contact" },
 ];
 export default function Header() {
@@ -19,7 +16,7 @@ export default function Header() {
   return (
     <>
       <Head>
-        <title>AST</title>
+        <title>ASTSHOP-ONLINE</title>
       </Head>
       <Navbar sticky="top" bg="light" variant="light">
         <Nav className="container flex nav-fill flex-wrap flex-sm-row mr-auto">
