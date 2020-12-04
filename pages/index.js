@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.css";
 import Design from "./design";
 import Solution from "../pages/solution";
 import Team from "../pages/team";
+import Form from "../components/layouts/form";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -45,6 +46,7 @@ export default function Home() {
           </a>
         </div>
       </main>
+      <div><Form/></div>
       <div id="about">
         <Design />
       </div>
